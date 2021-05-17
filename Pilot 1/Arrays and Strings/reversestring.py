@@ -8,9 +8,12 @@ def reverseString(A, start, end):
 #driver code
 A = ['t','h','i','s',' ','i','s',' ','g','o','o','d']
 A = "" .join(A)
-A = A.split() 
+A = A.split(" ") 
 reverseString(A,0, 2 )
 #Reversed List
 print('Reverse is:')
+A = " " .join(A)
+
+A = [char for char in A]
 print(A)
 
