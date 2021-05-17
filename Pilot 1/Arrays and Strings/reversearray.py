@@ -9,7 +9,7 @@ def reverseList(A, start, end):
         end -= 1
 
 
-#Testing the above equation
+#Testing the above function
 A = [10,5,6,9]
 print("The Original list is: ")
 print(A)
