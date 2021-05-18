@@ -1,6 +1,6 @@
 #A python program to reverse the string of an array
 # Function to reverse the string 
-def reverseString(A, start, end):
+def reverseSentence(A, start, end):
     while start < end:
         A[start], A[end] = A[end], A[start]
         start += 1
@@ -9,7 +9,7 @@ def reverseString(A, start, end):
 A = ['t','h','i','s',' ','i','s',' ','g','o','o','d']
 A = "" .join(A)
 A = A.split(" ") 
-reverseString(A,0, 2 )
+reverseSentence(A,0,2 )
 #Reversed List
 print('Reverse is:')
 A = " " .join(A)
