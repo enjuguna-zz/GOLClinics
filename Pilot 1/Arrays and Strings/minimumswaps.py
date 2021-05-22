@@ -1,22 +1,33 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the minimumSwaps function below.
 def minimumSwaps(arr):
-    ref_arr = sorted(arr)
-    index_dict = {v:i for i, v in enumerate(arr)}
-    swaps = 0
+    swap=0
+    for i in range (len(arr)):
+        if(arr[i]!=(i+1)):
+            t=i;
+            while(arr[t]!=(i+1)):
+                t+=1
+            temp=arr[t]
+            arr[t]=arr[i]
+            arr[i]=temp
+            swap+=1
+    return swap
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    for i, v in enumerate(arr):
-        correct_value = ref_arr[i]
-        if v!= correct_value: 
-            to_swap_ix = index_dict[correct_value]
-            arr[to_swap_ix], arr[i] = arr[i], arr[to_swap_ix]
-            index_dict[v] = to_swap_ix
-            index_dict[correct_value] = i
-            swaps += 1
-            print(swaps) #Prints the amount of swaps that have taken place
-    return swaps
-    
+    n = int(input())
 
+    arr = list(map(int, input().rstrip().split()))
 
-A = [7, 1, 3, 2, 4, 5, 6]
-minimumSwaps(A)
-print(A) #Prints the swapped array [1,2,3,4,5,6,7]
+    res = minimumSwaps(arr)
 
+    fptr.write(str(res) + '\n')
+
+    fptr.close()
