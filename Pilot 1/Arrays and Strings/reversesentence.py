@@ -7,13 +7,13 @@ def reverseSentence(A, start, end):
         end -= 1
 #driver code
 A = ['t','h','i','s',' ','i','s',' ','g','o','o','d']
-A = "" .join(A)
-A = A.split(" ") 
-reverseSentence(A,0,2 )
+A = "" .join(A) #this is good
+A = A.split(" ") #['this', 'is', 'good']
+reverseSentence(A,0,2 ) #['good', 'is', 'this']
 #Reversed List
 print('Reverse is:')
-A = " " .join(A)
+A = " " .join(A) #good is this
 
-A = [char for char in A]
+A = [char for char in A] #['g', 'o', 'o', 'd', ' ', 'i', 's', ' ', 't', 'h', 'i', 's']
 print(A)
 
