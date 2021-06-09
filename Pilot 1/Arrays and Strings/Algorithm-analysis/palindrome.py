@@ -19,4 +19,4 @@ is_palindrome("eric")
 # this program runs in linear time complexity O(n)
 
 # SPACE COMPLEXITY
-# memory allocation occurs once hence  constant space depending on the input 
+# memory allocation is O(n) occurs once hence  constant space depending on the input 
